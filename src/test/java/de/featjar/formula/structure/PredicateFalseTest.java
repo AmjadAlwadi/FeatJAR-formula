@@ -1,38 +1,43 @@
+/*
+ * Copyright (C) 2025 FeatJAR-Development-Team
+ *
+ * This file is part of FeatJAR-formula.
+ *
+ * formula is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3.0 of the License,
+ * or (at your option) any later version.
+ *
+ * formula is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with formula. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * See <https://github.com/FeatureIDE/FeatJAR-formula> for further information.
+ */
 package de.featjar.formula.structure;
 
-import de.featjar.formula.structure.predicate.False;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
 import de.featjar.formula.structure.predicate.False;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
-import de.featjar.formula.structure.predicate.False;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
-
 
 public class PredicateFalseTest {
-	
-	@Test
+
+    @Test
     void _getName() {
         assertEquals("false", False.INSTANCE.getName());
     }
-	
-	
-	@Test
+
+    @Test
     void _cloneNode() {
-		False f1 = False.INSTANCE;
-		False f2 = False.INSTANCE;
-		assertEquals(f1.cloneNode(), f2.cloneNode());
+        False f1 = False.INSTANCE;
+        False f2 = False.INSTANCE;
+        assertEquals(f1.cloneNode(), f2.cloneNode());
         assertEquals(False.INSTANCE, f1.cloneNode());
         assertEquals(False.INSTANCE, f2.cloneNode());
     }
-	
-	
 }
